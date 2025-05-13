@@ -28,7 +28,7 @@ const Page = () => {
 
       try {
         const response = await fetch(
-          "http://localhost:8080/process_image_upload",
+          `${process.env.BACKEND_URL}/process_image_upload`,
           {
             method: "POST",
             headers: {

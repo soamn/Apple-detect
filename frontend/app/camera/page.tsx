@@ -12,7 +12,7 @@ const Page = () => {
         const imageSrc = webcamRef.current.getScreenshot();
         if (imageSrc) {
           // Send the image to the Flask backend
-          fetch("http://localhost:8080/process_image_live", {
+          fetch(`${process.env.BACKEND_URL}/process_image_live`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
